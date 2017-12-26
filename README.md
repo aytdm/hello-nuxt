@@ -3,7 +3,7 @@
 ## What is this?
 
 This is a example application of Nuxt.js + Element-ui + axios.  
-You can see the demo app here: 
+You can see the demo app here: https://aytdm.github.io/hello-nuxt
 
 ## Build Setup
 
