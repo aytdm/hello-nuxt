@@ -4,15 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-    }
-  }
-}
-</script>
-
 <style>
 .header {
     font-size: 20px;
