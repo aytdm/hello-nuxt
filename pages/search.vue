@@ -12,7 +12,6 @@
         </el-form>
         <my-list :lists="mylist" :hasData="hasData" />
       </el-main>
-      <el-footer />
     </el-container>
   </div>
 </template>
