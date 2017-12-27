@@ -118,4 +118,12 @@ export default {
   text-align: center;
   font-size: 18px;
 }
+
+a:link, a:visited {
+    color: #59bb0c;
+}
+
+a:hover {
+    color: #3b8070;
+}
 </style>

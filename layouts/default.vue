@@ -30,7 +30,7 @@ html {
   padding: 10px 30px;
 }
 
-.button--white:visited {
+.button--white:link, .button--white:visited {
   color: #fff;
 }
 </style>

@@ -20,7 +20,7 @@
     text-decoration: none;
 }
 
-.header a:visited {
+.header a:link, .header a:visited {
     color: #fff;
 }
 </style>

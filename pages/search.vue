@@ -78,25 +78,8 @@ export default {
 </script>
 
 <style>
-a:link {
-    color: #59bb0c;
-}
-
-a:hover, a:visited {
-    color: #3b8070;
-}
-
 .el-form {
   margin-top: 1em;
   margin-left: 1em;
-}
-
-.el-footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #59bb0c;
-  color: white;
-  text-align: center;
 }
 </style>
