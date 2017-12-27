@@ -35,12 +35,12 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules|vendor)/
+          exclude: /(node_modules)/
         })
       }
       config.module.rules = config.module.rules.map((rule) => {
         if (rule.loader === 'babel-loader') {
-          rule.exclude = /node_modules|vendor/
+          rule.exclude = /node_modules/
         }
         return rule
       })
