@@ -19,7 +19,7 @@
 <script lang="babel">
 import axios from 'axios'
 import MyList from '~/components/List.vue'
-const QiitaBaseUrl = 'https://qiita.com/api/v2/'
+const BASE_URL = 'https://qiita.com/api/v2/'
 export default {
   layout: 'navbar',
   components: {
@@ -54,7 +54,7 @@ export default {
       })
     },
     sendRequest () {
-      axios.get(QiitaBaseUrl + 'items', {
+      axios.get(BASE_URL + 'items', {
         headers: {'Content-Type': 'application/json'},
         params: {
           page: 1,
