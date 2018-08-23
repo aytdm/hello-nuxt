@@ -47,6 +47,6 @@ module.exports = {
     }
   },
   router: {
-    base: '/hello-nuxt/'
+    base: '/'
   }
 }
