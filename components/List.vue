@@ -32,9 +32,9 @@
       </el-card>
     </el-col>
     <div v-if="250 < scrollY" class="page-component-up">
-      <transition name="fade">
-        <i class="el-icon-caret-top" @click="scrollTop" />
-      </transition>
+      <a href="#" id="return-top" v-scroll-to="'#top'">
+        <i class="el-icon-caret-top" />
+      </a>
     </div>
   </div>
 </div>
@@ -57,10 +57,6 @@ export default {
     },
     handleScroll: function () {
       this.scrollY = window.scrollY
-    },
-    scrollTop: function () {
-      document.body.scrollTop = 0
-      document.documentElement.scrollTop = 0
     }
   }
 }
