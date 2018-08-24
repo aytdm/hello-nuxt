@@ -18,7 +18,8 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   plugins: [
-    { src: '~plugins/element-ui', ssr: false }
+    { src: '~plugins/element-ui', ssr: false },
+    { src: '~plugins/vue-scrollto', ssr: false }
   ],
   css: [
     'element-ui/lib/theme-chalk/index.css'
@@ -27,7 +28,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios', 'element-ui'],
+    vendor: ['axios', 'element-ui', 'vue-scrollto'],
     /*
     ** Run ESLint on save
     */
