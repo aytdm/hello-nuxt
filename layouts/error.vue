@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="error-container">
     <h1 v-if="error.statusCode === 404">Page not found ...(☍﹏⁰) </h1>
     <h1 v-else>An error occured </h1>
     <nuxt-link to="/">Back Top</nuxt-link>

@@ -30,20 +30,20 @@ html, body {
     }
 }
 
-#header {
+.header {
     @include font-size(12);
     padding: 15px;
     height: 30px;
     top: 0;
 }
 
-#footer {
+.footer {
     padding: 15px;
     height: 30px;
     bottom: 0;
 }
 
-#top { 
+.top { 
     .container {
         min-height: 100vh;
         display: flex;
@@ -79,7 +79,7 @@ html, body {
     }
 }
 
-#error-container {
+.error-container {
     padding: 300px;
     text-align: center;
     h1 {

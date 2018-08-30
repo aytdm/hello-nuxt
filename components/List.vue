@@ -32,7 +32,7 @@
       </el-card>
     </el-col>
     <div v-if="250 < scrollY" class="page-component-up">
-      <a href="#" id="return-top" v-scroll-to="'#top'">
+      <a href="#" id="return-top" v-scroll-to="'#page_top'">
         <i class="el-icon-caret-top" />
       </a>
     </div>
