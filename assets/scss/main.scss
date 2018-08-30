@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+html, body {
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #59bb0c;
+    color: #fff;
+    a {
+        text-decoration: none;
+        &:link, &:visited {
+            color: #fff;
+        }
+    }
+    
+    *, *:before, *:after {
+        margin: 0;
+    }
+}
+
+#header {
+    font-size: 20px;
+    padding: 15px;
+    height: 30px;
+    top: 0;
+}
+
+#footer {
+    padding: 15px;
+    height: 30px;
+    bottom: 0;
+}
+
+#top { 
+    .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+     
+    .button--white {
+        display: inline-block;
+        border-radius: 4px;
+        border: 1px solid #fff;
+        text-decoration: none;
+        padding: 10px 30px;
+    }
+
+    .title {
+        font-weight: 500;
+        font-size: 100px;      
+        letter-spacing: 8px;
+    }
+    
+    .subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        word-spacing: 3px;
+        padding-top: 24px;
+        padding-bottom: 30px;
+    }
+      
+    .links {
+        padding-top: 15px;
+    }
+}
+
+#error-container {
+    padding: 300px;
+    text-align: center;
+    h1 {
+        font-size: 22px;
+    }
+}
+
+#page_top {
+    background-color: #fff;
+    color: #f00;
+    
+    a {
+        &:link, &:visited {
+            color: #59bb0c;
+        }
+        &:hover {
+            color: #3b8070;
+        }
+    }
+    
+    .el-form {
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+
+    .clearfix:before, .clearfix:after {
+        display: table;
+        content: "";
+        clear: both
+    }
+
+    .content-style {
+        line-height: 30px;
+    }
+
+    .tab-style {
+        margin-right: 5px;
+    }
+
+    .box-card {
+        height: 360px;
+        font-size: 15px;      
+    }
+
+    .col-style {
+        padding: 10px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .page-component-up {
+        background-color: #59bb0c;
+        position: fixed;
+        right: 80px;
+        bottom: 80px;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: .5s;
+        box-shadow: 0 0 7px rgba(0,0,0,0.4);
+        i {
+            color: #fff;
+            display: block;
+            line-height: 40px;
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+}
