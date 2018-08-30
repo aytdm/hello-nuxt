@@ -13,35 +13,3 @@
     </div>
   </section>
 </template>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #59bb0c;
-}
-
-.title {
-  display: block;
-  font-weight: 400;
-  font-size: 100px;
-  color: #fff;
-  letter-spacing: 5px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 18px;
-  color: #fff;
-  word-spacing: 2px;
-  padding-top: 24px;
-  padding-bottom: 30px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

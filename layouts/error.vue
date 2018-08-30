@@ -11,14 +11,3 @@ export default {
   props: ['error']
 }
 </script>
-
-<style scoped>
-.container {
-  padding-top: 10%;
-  text-align: center;
-}
-
-h1 {
-  font-size: 22px;
-}
-</style>
