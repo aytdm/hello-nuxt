@@ -16,6 +16,7 @@
     "axios": "^0.17.1",
     "element-ui": "^2.4.6",
     "nuxt": "^1.4.2",
+    "nuxt-sass-resources-loader": "^2.0.4",
     "vue-scrollto": "^2.11.0"
   },
   "devDependencies": {
@@ -28,5 +29,7 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.0.1",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0"
   }
 }

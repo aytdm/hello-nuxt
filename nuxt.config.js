@@ -22,7 +22,12 @@ module.exports = {
     { src: '~plugins/vue-scrollto', ssr: false }
   ],
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '@/assets/scss/main.scss'
+  ],
+  modules: [
+    // provide path to the file with resources
+    ['nuxt-sass-resources-loader', '@/assets/scss/main.scss']
   ],
   /*
   ** Build configuration
