@@ -53,8 +53,5 @@ module.exports = {
         return rule
       })
     }
-  },
-  router: {
-    base: '/'
   }
 }
