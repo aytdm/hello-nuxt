@@ -1,14 +1,14 @@
 <template>
   <section class="container">
     <div>
-      <h1 class="title">
+      <h1>
         Qiita
       </h1>
-      <h4 class="subtitle">
+      <h4>
         Qiita is a technical knowledge sharing and collaboration platform for programmers.
       </h4>
       <div class="links">
-        <nuxt-link to="/search" class="button--white"><i class="el-icon-search"></i> Search</nuxt-link>
+        <nuxt-link to="/search" class="button-white"><i class="el-icon-search"></i> Search</nuxt-link>
       </div>
     </div>
   </section>

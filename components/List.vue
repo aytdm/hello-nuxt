@@ -6,10 +6,10 @@
   <div v-else>
     <el-col :span="6" v-for="(element, index) in lists" :key="index" class="col-style">
       <el-card :body-style="{ padding: '15px' }" class="box-card">
-        <div slot="header" class="clearfix">
+        <div slot="header" >
           <a :href="element.url" target="_blank">{{ element.title }}</a>
         </div>
-        <div class="bottom clearfix content-style text">
+        <div class="content-style text">
           <div>{{ element.created_at }}</div>
           <span>
             <img :src="element.user.profile_image_url" width="15" height="15" />
@@ -27,7 +27,7 @@
             <i class="el-icon-star-off">{{ element.likes_count }}</i>
           </span>
           <div>{{ getDescription(element.body) }}</div>
-          <el-tag size="mini" type="info" class="tab-style" v-for="(tag, index) in element.tags" :key="index">{{ tag.name }}</el-tag>
+          <el-tag size="mini" type="info" class="tag-style" v-for="(tag, index) in element.tags" :key="index">{{ tag.name }}</el-tag>
         </div>
       </el-card>
     </el-col>
