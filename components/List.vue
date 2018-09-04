@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div v-if="lists.length === 0 && !hasData">
+  <div v-if="lists.length === 0 && !isLoading">
     <i class="el-icon-warning">&nbsp;No results found for your keyword.</i>
   </div>
   <div v-else>
