@@ -17,13 +17,19 @@
 </template>
 
 <script lang="babel">
-import axios from 'axios'
 import MyList from '~/components/List.vue'
-const BASE_URL = 'https://qiita.com/api/v2/'
+
 export default {
   layout: 'navbar',
   components: {
     MyList
+  },
+  async fetch ({ store }) {
+    store.dispatch('getItems', {
+      keyword: 'nuxt.js'
+    }).catch((error) => {
+      console.error(error)
+    })
   },
   data () {
     return {
@@ -38,11 +44,6 @@ export default {
       mylist: [],
       hasData: true
     }
-  },
-  created () {
-    this.searchForm.keyword = 'nuxt.js'
-    this.sendRequest()
-    this.searchForm.keyword = ''
   },
   methods: {
     search (form) {
