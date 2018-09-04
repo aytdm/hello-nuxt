@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -10,7 +11,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/hello-nuxt/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
@@ -18,8 +19,8 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   plugins: [
-    { src: '~plugins/element-ui', ssr: false },
-    { src: '~plugins/vue-scrollto', ssr: false }
+    { src: '@/plugins/element-ui', ssr: false },
+    { src: '@/plugins/vue-scrollto', ssr: false }
   ],
   css: [
     'element-ui/lib/theme-chalk/index.css',
