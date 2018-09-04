@@ -27,8 +27,6 @@ export default {
   async fetch ({ store }) {
     store.dispatch('getItems', {
       keyword: 'nuxt.js'
-    }).catch((error) => {
-      console.error(error)
     })
   },
   data () {
@@ -54,24 +52,13 @@ export default {
         this.sendRequest()
       })
     },
-    sendRequest () {
-      axios.get(BASE_URL + 'items', {
-        headers: {'Content-Type': 'application/json'},
-        params: {
-          page: 1,
-          per_page: 20,
-          query: this.searchForm.keyword
-        }
+    async sendRequest () {
+      this.$store.dispatch('getItems', {
+        keyword: this.searchForm.keyword
+      }).catch((error) => {
+        console.error(error)
+        this.$router.push('/error')
       })
-        .then(response => {
-          if (response.data.length === 0) {
-            this.hasData = false
-          }
-          this.mylist = response.data
-        })
-        .catch(e => {
-          console.error('error:', e)
-        })
     }
   }
 }
