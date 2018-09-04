@@ -10,7 +10,7 @@
           <a :href="element.url" target="_blank">{{ element.title }}</a>
         </div>
         <div class="content-style text">
-          <div>{{ element.created_at }}</div>
+          <div>{{ element.created_at | formatDate }}</div>
           <span>
             <img :src="element.user.profile_image_url" width="15" height="15" />
             <template v-if="element.user.description">
