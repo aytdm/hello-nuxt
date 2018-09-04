@@ -17,6 +17,7 @@
 </template>
 
 <script lang="babel">
+import axios from 'axios'
 import MyList from '~/components/List.vue'
 const BASE_URL = 'https://qiita.com/api/v2/'
 export default {
@@ -52,16 +53,24 @@ export default {
         this.sendRequest()
       })
     },
-    async sendRequest () {
-      this.mylist = await this.$axios.$get(BASE_URL + 'items', {
+    sendRequest () {
+      axios.get(BASE_URL + 'items', {
         headers: {'Content-Type': 'application/json'},
         params: {
           page: 1,
           per_page: 20,
           query: this.searchForm.keyword
-        },
-        timeout: 3000
+        }
       })
+        .then(response => {
+          if (response.data.length === 0) {
+            this.hasData = false
+          }
+          this.mylist = response.data
+        })
+        .catch(e => {
+          console.error('error:', e)
+        })
     }
   }
 }

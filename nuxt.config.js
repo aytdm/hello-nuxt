@@ -18,9 +18,8 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   plugins: [
-    { src: '~/plugins/element-ui', ssr: false },
-    { src: '~/plugins/vue-scrollto', ssr: false },
-    '~/plugins/axios'
+    { src: '~plugins/element-ui', ssr: false },
+    { src: '~plugins/vue-scrollto', ssr: false }
   ],
   css: [
     'element-ui/lib/theme-chalk/index.css',
@@ -28,14 +27,13 @@ module.exports = {
   ],
   modules: [
     // provide path to the file with resources
-    ['nuxt-sass-resources-loader', '@/assets/scss/main.scss'],
-    '@nuxtjs/axios'
+    ['nuxt-sass-resources-loader', '@/assets/scss/main.scss']
   ],
   /*
   ** Build configuration
   */
   build: {
-    vendor: ['@nuxtjs/axios', 'element-ui', 'vue-scrollto'],
+    vendor: ['axios', 'element-ui', 'vue-scrollto'],
     /*
     ** Run ESLint on save
     */
