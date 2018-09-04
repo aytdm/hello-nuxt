@@ -10,13 +10,14 @@
             <el-button @click="search('searchForm')">search</el-button>
           </el-form-item>
         </el-form>
-        <my-list :lists="mylist" :hasData="hasData" />
+        <my-list :lists="lists" :hasData="hasData" />
       </el-main>
     </el-container>
   </div>
 </template>
 
 <script lang="babel">
+import {mapState} from 'vuex'
 import MyList from '~/components/List.vue'
 
 export default {
@@ -38,11 +39,13 @@ export default {
         keyword: [
           { required: true, message: 'Please input the keyword', trigger: 'blur' }
         ]
-      },
-      mylist: [],
-      hasData: true
+      }
     }
   },
+  computed: mapState([
+    'lists',
+    'hasData'
+  ]),
   methods: {
     search (form) {
       this.$refs[form].validate((valid) => {
@@ -55,9 +58,6 @@ export default {
     async sendRequest () {
       this.$store.dispatch('getItems', {
         keyword: this.searchForm.keyword
-      }).catch((error) => {
-        console.error(error)
-        this.$router.push('/error')
       })
     }
   }
