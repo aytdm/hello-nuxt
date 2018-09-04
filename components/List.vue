@@ -41,8 +41,9 @@
 </template>
 
 <script lang="babel">
+import {mapState} from 'vuex'
+
 export default {
-  props: ['lists', 'hasData'],
   data () {
     return {
       scrollY: 0
@@ -51,6 +52,7 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
+  computed: mapState(['lists', 'isLoading']),
   methods: {
     getDescription: function (body) {
       return body.slice(0, 100) + '...'
