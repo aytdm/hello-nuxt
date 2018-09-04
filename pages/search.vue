@@ -2,6 +2,8 @@
   <div id="page_top">
     <el-container>
       <el-main v-loading.fullscreen.lock="isLoading">
+        <search-form />
+        <search-result />
       </el-main>
     </el-container>
   </div>
@@ -9,14 +11,14 @@
 
 <script lang="babel">
 import {mapState} from 'vuex'
-import MyList from '~/components/List.vue'
+import SearchResult from '~/components/List.vue'
 import SearchForm from '~/components/SearchForm.vue'
 
 export default {
   layout: 'navbar',
   components: {
-    MyList,
-    SearchForm
+    SearchForm,
+    SearchResult
   },
   computed: mapState(['isLoading']),
   async fetch ({ store }) {
