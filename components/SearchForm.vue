@@ -18,7 +18,8 @@ export default {
       },
       rules: {
         keyword: [
-          { required: true, message: 'Please input the keyword', trigger: 'blur' }
+          { required: true, message: 'Please input the keyword', trigger: 'blur' },
+          { whitespace: true, message: 'Please input the keyword', trigger: 'blur' }
         ]
       }
     }
