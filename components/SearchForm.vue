@@ -33,7 +33,7 @@ export default {
         this.sendRequest()
       })
     },
-    async sendRequest () {
+    sendRequest () {
       this.$store.dispatch('getItems', {
         keyword: this.searchForm.keyword
       })

@@ -21,7 +21,7 @@ export default {
     SearchResult
   },
   computed: mapState(['isLoading']),
-  async fetch ({ store }) {
+  fetch ({ store }) {
     store.dispatch('getItems', {
       keyword: 'nuxt.js'
     })
