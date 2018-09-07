@@ -19,13 +19,13 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   plugins: [
-    { src: '@/plugins/element-ui', ssr: false },
-    { src: '@/plugins/vue-scrollto', ssr: false },
-    { src: '@/plugins/filters.js', ssr: false }
+    { src: '~/plugins/element-ui', ssr: false },
+    { src: '~/plugins/vue-scrollto', ssr: false },
+    { src: '~/plugins/filters', ssr: false }
   ],
   css: [
-    'element-ui/lib/theme-chalk/index.css',
-    '@/assets/scss/main.scss'
+    { src: 'element-ui/lib/theme-chalk/index.css', lang: 'css' },
+    { src: '~/assets/scss/main.scss', lang: 'scss' }
   ],
   modules: [
     // provide path to the file with resources
