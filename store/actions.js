@@ -18,7 +18,6 @@ export default {
       commit('hideLoading')
       this.$router.push('/error')
     })
-    console.log(JSON.stringify(response.data))
     commit('setItems', response.data)
     commit('hideLoading')
   }
