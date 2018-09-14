@@ -10,7 +10,7 @@
             <a :href="element.url" target="_blank">{{ element.title }}</a>
           </div>
           <div class="bottom content-style text">
-            <div>{{ element.created_at }}</div>
+            <div>{{ element.created_at | formatDate }}</div>
             <span>
               <img :src="element.user.profile_image_url" width="15" height="15" />
               <template v-if="element.user.description">
@@ -26,7 +26,7 @@
             <span>
               <i class="el-icon-star-off">{{ element.likes_count }}</i>
             </span>
-            <div>{{ getDescription(element.body) }}</div>
+            <div>{{ element.body | description }}</div>
             <el-tag size="mini" type="info" class="tab-style" v-for="(tag, index) in element.tags" :key="index">{{ tag.name }}</el-tag>
           </div>
         </el-card>
@@ -52,9 +52,6 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
-    getDescription: function (body) {
-      return body.slice(0, 100) + '...'
-    },
     handleScroll: function () {
       this.scrollY = window.scrollY
     },
