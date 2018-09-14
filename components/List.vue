@@ -31,11 +31,11 @@
           </div>
         </el-card>
       </el-col>
-      <template v-if="250 < scrollY" class="page-component-up">
+      <div v-if="250 < scrollY" class="page-component-up">
         <transition name="fade">
           <i class="el-icon-caret-top" @click="scrollTop" />
         </transition>
-      </template>
+      </div>
     </template>
   </div>
 </template>
