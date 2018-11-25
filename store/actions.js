@@ -12,7 +12,7 @@ export default {
         per_page: 20,
         query: payload.keyword
       },
-      timeout: 3000
+      timeout: 15000
     }).catch((error) => {
       console.error(error)
       commit('hideLoading')
