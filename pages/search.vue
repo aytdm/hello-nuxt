@@ -1,15 +1,16 @@
 <template>
   <div>
     <el-container>
-      <el-main>
-        <search-form @send-lists="getLists" />
-        <search-result :lists="resultLists" :hasData="hasData" />
+      <el-main v-loading.fullscreen.lock="isLoading">
+        <search-form />
+        <search-result />
       </el-main>
     </el-container>
   </div>
 </template>
 
 <script lang="babel">
+import {mapState} from 'vuex'
 import SearchResult from '~/components/List.vue'
 import SearchForm from '~/components/SearchForm.vue'
 
@@ -19,16 +20,11 @@ export default {
     SearchForm,
     SearchResult
   },
-  data () {
-    return {
-      resultLists: [],
-      hasData: true
-    }
-  },
-  methods: {
-    getLists (responseList) {
-      this.resultLists = responseList
-    }
+  computed: mapState(['isLoading']),
+  fetch ({ store }) {
+    store.dispatch('getItems', {
+      keyword: 'nuxt.js'
+    })
   }
 }
 </script>
