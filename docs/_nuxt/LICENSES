@@ -4,6 +4,12 @@
  * Released under the MIT License.
  */
 
+/**
+ * vuex v3.0.1
+ * (c) 2017 Evan You
+ * @license MIT
+ */
+
 /*!
  * Determine if an object is a Buffer
  *
