@@ -1,7 +1,8 @@
 module.exports = {
+  mode: 'spa',
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: 'hello-nuxt',
     meta: [
@@ -10,22 +11,27 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/hello-nuxt/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=M+PLUS+1p'
+      }
     ]
   },
   /*
-  ** Customize the progress bar color
-  */
+   ** Customize the progress bar color
+   */
   loading: { color: '#3B8070' },
-  plugins: ['~plugins/element-ui', { src: '~plugins/element-ui', ssr: false }],
-  css: [
-    'element-ui/lib/theme-chalk/index.css'
+  plugins: [
+    { src: '@/plugins/element-ui', ssr: false },
+    { src: '@/plugins/filters.js', ssr: false }
   ],
+  css: ['element-ui/lib/theme-chalk/index.css'],
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
-    vendor: ['axios', 'element-ui'],
+    vendor: ['axios', 'element-ui', 'moment'],
     /*
     ** Run ESLint on save
     */
@@ -45,8 +51,5 @@ module.exports = {
         return rule
       })
     }
-  },
-  router: {
-    base: '/'
   }
 }
