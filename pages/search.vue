@@ -32,3 +32,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.el-main {
+  background-color: #fff;
+}
+</style>

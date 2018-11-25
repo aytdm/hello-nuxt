@@ -66,6 +66,7 @@ export default {
 <style>
 .content-style {
   line-height: 30px;
+  font-size: 14px;
 }
 
 .tab-style {
@@ -81,10 +82,6 @@ export default {
   padding: 10px;
 }
 
-.text {
-  font-size: 14px;
-}
-
 .page-component-up {
   background-color: #59bb0c;
   position: fixed;
@@ -94,8 +91,8 @@ export default {
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
-  transition: .3s;
-  box-shadow: 0 0 6px rgba(0,0,0,.12);
+  transition: 0.3s;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
 }
 
 .page-component-up i {
@@ -106,8 +103,9 @@ export default {
   font-size: 18px;
 }
 
-a:link, a:visited {
-    color: #59bb0c;
+a:link,
+a:visited {
+  color: #59bb0c;
 }
 
 a:hover {

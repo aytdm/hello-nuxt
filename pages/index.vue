@@ -1,10 +1,10 @@
 <template>
   <section class="container">
     <div>
-      <h1 class="title">
+      <h1>
         Qiita
       </h1>
-      <h4 class="subtitle">
+      <h4>
         Qiita is a technical knowledge sharing and collaboration platform for programmers.
       </h4>
       <div class="links">
@@ -21,10 +21,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #fff;
   background-color: #59bb0c;
 }
 
-.title {
+h1 {
   display: block;
   font-weight: 400;
   font-size: 100px;
@@ -32,16 +33,15 @@
   letter-spacing: 5px;
 }
 
-.subtitle {
+h4 {
   font-weight: 300;
   font-size: 18px;
-  color: #fff;
   word-spacing: 2px;
   padding-top: 24px;
   padding-bottom: 30px;
 }
 
-.links {
+.container .links {
   padding-top: 15px;
 }
 </style>
