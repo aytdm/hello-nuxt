@@ -26,7 +26,7 @@
           <span>
             <i class="el-icon-star-off">{{ element.likes_count }}</i>
           </span>
-          <div>{{ getDescription(element.body) }}</div>
+          <div>{{ element.body | description }}</div>
           <el-tag size="mini" type="info" class="tag-style" v-for="(tag, index) in element.tags" :key="index">{{ tag.name }}</el-tag>
         </div>
       </el-card>
@@ -54,9 +54,6 @@ export default {
   },
   computed: mapState(['lists', 'isLoading']),
   methods: {
-    getDescription: function (body) {
-      return body.slice(0, 100) + '...'
-    },
     handleScroll: function () {
       this.scrollY = window.scrollY
     }

@@ -6,3 +6,9 @@ Vue.filter('formatDate', function (value) {
     return moment(String(value)).format('YYYY/MM/DD HH:mm')
   }
 })
+
+Vue.filter('description', function (value) {
+  if (value) {
+    return value.slice(0, 100) + '...'
+  }
+})
