@@ -11,7 +11,7 @@
 
 <script lang="babel">
 import {mapState} from 'vuex'
-import SearchResult from '~/components/List.vue'
+import SearchResult from '~/components/SearchResult.vue'
 import SearchForm from '~/components/SearchForm.vue'
 
 export default {
