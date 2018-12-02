@@ -35,7 +35,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios', 'element-ui', 'moment', 'vue-scrollto'],
+    vendor: ['axios', 'element-ui', 'dayjs', 'vue-scrollto'],
     /*
     ** Run ESLint on save
     */

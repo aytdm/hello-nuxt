@@ -21,9 +21,9 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "element-ui": "^2.4.6",
-    "moment": "^2.22.2",
-    "nuxt": "^1.4.2",
+    "dayjs": "^1.7.7",
+    "element-ui": "^2.4.11",
+    "nuxt": "^1.4.4",
     "nuxt-sass-resources-loader": "^2.0.4",
     "vue-scrollto": "^2.11.0"
   },
