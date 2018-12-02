@@ -21,9 +21,8 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "dayjs": "^1.7.7",
     "element-ui": "^2.4.11",
-    "moment": "^2.22.2",
-    "npm": "^6.4.1",
     "nuxt": "^1.4.4"
   },
   "devDependencies": {
