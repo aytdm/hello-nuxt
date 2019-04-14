@@ -1,14 +1,14 @@
-const browserEnv = require('browser-env');
-const hooks = require('require-extension-hooks');
-const Vue = require('vue');
-const Vuex = require('vuex');
+const browserEnv = require('browser-env')
+const hooks = require('require-extension-hooks')
+const Vue = require('vue')
+const Vuex = require('vuex')
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 // Setup a fake browser environment
-browserEnv();
+browserEnv()
 
 // Setup vue files to be processed by `require-extension-hooks-vue`
-hooks('vue').plugin('vue').push();
+hooks('vue').plugin('vue').push()
 // Setup vue and js files to be processed by `require-extension-hooks-babel`
-hooks(['vue', 'js']).plugin('babel').push();
+hooks(['vue', 'js']).plugin('babel').push()

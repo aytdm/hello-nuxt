@@ -17,11 +17,3 @@ export default {
   }
 }
 </script>
-
-<style>
-*,
-*:before,
-*:after {
-  margin: 0;
-}
-</style>

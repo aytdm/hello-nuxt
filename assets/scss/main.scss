@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+@import 'fonts';
+@import 'variables';
+@import 'partial';
+
+html, body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  @include font-face('Kosugi Maru', '~/assets/fonts/KosugiMaru-Regular', null, null, woff);
+  font-family: 'Kosugi Maru', 'Segoe UI';
+  font-size: 16px;
+  word-spacing: 0.0625rem;
+  background-color: $DEFAULT_COLOR;
+  color: $DEFAULT_TEXT_COLOR;
+  a {
+    text-decoration: none;
+    &:link, &:visited {
+      color: $DEFAULT_TEXT_COLOR;
+    }
+  }
+
+  *, *:before, *:after {
+    margin: 0;
+  }
+}
+
+.header {
+  @include font-size(12);
+  @extend .header-fotter;
+  top: 0;
+}
+
+.footer {
+  @extend .header-fotter;
+  bottom: 0;
+}
+
+.top {
+  .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-spacing: 0.1875rem;
+
+    h1 {
+      font-weight: 550;
+      @include font-size(60);
+      letter-spacing: 0.375rem;
+    }
+    h4 {
+      font-weight: normal;
+      @include font-size(11);
+      padding-top: 1.5rem;
+      padding-bottom: 1.875rem;
+    }
+
+    .links {
+      padding-top: 0.938rem;
+      .button-white {
+        display: inline-block;
+        border-radius: 0.25rem;
+        border: 0.0625rem solid $DEFAULT_TEXT_COLOR;
+        text-decoration: none;
+        padding: 0.625rem 1.875rem;
+      }
+    }
+  }
+}
+
+.error-container {
+  padding: 18.75rem;
+  text-align: center;
+  h1 {
+    @include font-size(12);
+  }
+}
+
+#page_top {
+  background-color: $DEFAULT_TEXT_COLOR;
+  color: $WARNING_TEXT_COLOR;
+
+  a {
+    &:link, &:visited {
+      color: $DEFAULT_COLOR;
+    }
+    &:hover {
+      color: $VISITED_TEXT_COLOR;
+    }
+  }
+
+  .el-form {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  .content-style {
+    line-height: 1.875rem;
+    @include font-size(8.5);
+  }
+
+  .tag-style {
+    margin-right: 0.313rem;
+  }
+
+  .box-card {
+    height: 22.5rem;
+    @include font-size(9.5);
+  }
+
+  .col-style {
+    padding: 0.625rem;
+  }
+
+  .page-component-up {
+    background-color: $DEFAULT_COLOR;
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 0.438rem rgba(0,0,0,0.4);
+    i {
+      color: $DEFAULT_TEXT_COLOR;
+      display: block;
+      line-height: 2.5rem;
+      text-align: center;
+      @include font-size(14);
+    }
+  }
+}

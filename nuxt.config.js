@@ -11,27 +11,31 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=M+PLUS+1p'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
-   ** Customize the progress bar color
-   */
+  ** Customize the progress bar color
+  */
   loading: { color: '#3B8070' },
   plugins: [
-    { src: '@/plugins/element-ui', ssr: false },
-    { src: '@/plugins/filters.js', ssr: false }
+    { src: '~/plugins/element-ui', ssr: false },
+    { src: '~/plugins/vue-scrollto', ssr: false },
+    { src: '~/plugins/filters', ssr: false }
   ],
-  css: ['element-ui/lib/theme-chalk/index.css'],
+  css: [
+    { src: 'element-ui/lib/theme-chalk/index.css', lang: 'css' },
+    { src: '~/assets/scss/main.scss', lang: 'scss' }
+  ],
+  modules: [
+    // provide path to the file with resources
+    ['nuxt-sass-resources-loader', '@/assets/scss/main.scss']
+  ],
   /*
-   ** Build configuration
-   */
+  ** Build configuration
+  */
   build: {
-    vendor: ['axios', 'element-ui', 'dayjs'],
+    vendor: ['axios', 'element-ui', 'dayjs', 'vue-scrollto'],
     /*
     ** Run ESLint on save
     */

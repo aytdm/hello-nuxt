@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="page_top">
     <el-container>
       <el-main v-loading.fullscreen.lock="isLoading">
         <search-form />
@@ -28,9 +28,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.el-main {
-  background-color: #fff;
-}
-</style>

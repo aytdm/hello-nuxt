@@ -41,10 +41,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.el-form {
-  margin-top: 1em;
-  margin-left: 1em;
-}
-</style>
