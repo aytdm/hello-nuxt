@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   mode: 'spa',
   srcDir: 'src/',
   /*
@@ -11,37 +11,54 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  },
+
+  /*
+   ** Customize the progress-bar color
+   */
+  loading: { color: '#3B8070' },
+
+  /*
+   ** Global CSS
+   */
+  css: [
+    'element-ui/lib/theme-chalk/index.css',
+    '~/assets/scss/main.scss'
+  ],
+
+  /*
+   ** Plugins to load before mounting the App
+   */
+  plugins: [
+    { src: '~/plugins/element-ui', mode: 'client' },
+    { src: '~/plugins/vue-scrollto', mode: 'client' },
+    { src: '~/plugins/filters', mode: 'client' }
+  ],
+
+  /*
+   ** Nuxt.js modules
+   */
+  modules: [
+    '@nuxtjs/style-resources'
+  ],
+  styleResources: {
+    scss: [
+      '~/assets/sccs/*.scss'
     ]
   },
+
   /*
-  ** Customize the progress bar color
-  */
-  loading: { color: '#3B8070' },
-  plugins: [
-    { src: '~/plugins/element-ui', ssr: false },
-    { src: '~/plugins/vue-scrollto', ssr: false },
-    { src: '~/plugins/filters', ssr: false }
-  ],
-  css: [
-    { src: 'element-ui/lib/theme-chalk/index.css', lang: 'css' },
-    { src: '~/assets/scss/main.scss', lang: 'scss' }
-  ],
-  modules: [
-    // provide path to the file with resources
-    ['nuxt-sass-resources-loader', '@/assets/scss/main.scss']
-  ],
-  /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
-    vendor: ['axios', 'element-ui', 'dayjs', 'vue-scrollto'],
+    transpile: [/^element-ui/],
+
     /*
-    ** Run ESLint on save
-    */
-    extend (config, ctx) {
-      if (ctx.isDev && ctx.isClient) {
+     ** You can extend webpack config here
+     */
+    extend (config, { isDev }) {
+      if (isDev && process.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -49,12 +66,6 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-      config.module.rules = config.module.rules.map((rule) => {
-        if (rule.loader === 'babel-loader') {
-          rule.exclude = /node_modules/
-        }
-        return rule
-      })
     }
   }
 }
