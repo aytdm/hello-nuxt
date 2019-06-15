@@ -1,10 +1,24 @@
 <template>
-  <el-form :inline="true" :model="searchForm" ref="searchForm" :rules="rules" @submit.native.prevent>
+  <el-form
+    :inline="true"
+    :model="searchForm"
+    ref="searchForm"
+    :rules="rules"
+    @submit.native.prevent
+  >
     <el-form-item prop="keyword">
-      <el-input placeholder="search by keyword" prefix-icon="el-icon-search" v-model="searchForm.keyword"  @keyup.enter.native="search('searchForm')" />
+      <el-input
+        placeholder="search by keyword"
+        prefix-icon="el-icon-search"
+        v-model="searchForm.keyword"
+        @keydown.enter.native="$event.stopPropagation()"
+        @keyup.enter.native="search('searchForm')"
+      />
     </el-form-item>
     <el-form-item>
-      <el-button @click="search('searchForm')">search</el-button>
+      <el-button @click="search('searchForm')">
+        search
+      </el-button>
     </el-form-item>
   </el-form>
 </template>

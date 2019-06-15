@@ -14,7 +14,7 @@ html, body {
   margin: 0;
   height: 100%;
   width: 100%;
-  @include font-face('Kosugi Maru', '~/assets/fonts/KosugiMaru-Regular', null, null, woff);
+  @include font-face('Kosugi Maru', '/src/assets/fonts/KosugiMaru-Regular', null, null, woff);
   font-family: 'Kosugi Maru', 'Segoe UI';
   font-size: 16px;
   word-spacing: 0.0625rem;

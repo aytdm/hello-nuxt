@@ -1,5 +1,6 @@
 module.exports = {
   mode: 'spa',
+  srcDir: 'src/',
   /*
    ** Headers of the page
    */
