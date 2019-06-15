@@ -6,7 +6,7 @@ export default {
   async getItems ({ commit }, payload) {
     commit('showLoading')
     const response = await axios.get(`${BASE_URL}items`, {
-      headers: {'Content-Type': 'application/json'},
+      headers: { 'Content-Type': 'application/json' },
       params: {
         page: 1,
         per_page: 20,
