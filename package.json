@@ -12,7 +12,8 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "analyze": "nuxt build --analyze",
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "test:ci": "jest --ci"
   },
   "dependencies": {
     "axios": "^0.18.1",
