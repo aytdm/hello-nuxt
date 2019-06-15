@@ -12,12 +12,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "analyze": "nuxt build --analyze",
-    "test": "ava --verbose --serial"
-  },
-  "ava": {
-    "files": [
-      "./test/**/*.spec.js"
-    ]
+    "test": "jest --verbose"
   },
   "dependencies": {
     "axios": "^0.18.1",
@@ -29,8 +24,8 @@
   "devDependencies": {
     "@nuxtjs/style-resources": "^0.1.2",
     "@vue/test-utils": "^1.0.0-beta.29",
-    "ava": "^1.4.1",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
     "browser-env": "^3.2.5",
     "eslint": "^5.16.0",
     "eslint-config-standard": ">=12.0.0",
@@ -42,10 +37,10 @@
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.2.2",
-    "jsdom": "^14.0.0",
+    "jest": "^24.8.0",
     "node-sass": "^4.11.0",
     "require-extension-hooks-babel": "^0.1.1",
     "sass-loader": "^7.1.0",
-    "sinon": "^7.3.1"
+    "vue-jest": "^3.0.4"
   }
 }
