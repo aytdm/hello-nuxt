@@ -1,5 +1,11 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base"],
+  "assignees": ["aytdm"],
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch"],
+      "automergeType": "branch",
+      "automerge": true
+    }
   ]
 }
