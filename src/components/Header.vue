@@ -2,7 +2,7 @@
   <div class="header">
     <nuxt-link to="/">
       <b>
-        Hello Qiita with Nuxt.js ＼＼\\ ٩(*'ω'*)و //／／
+        Hello Nuxt.js with Qiita ＼＼\\ ٩(*'&omega;'*)و //／／
       </b>
     </nuxt-link>
   </div>
