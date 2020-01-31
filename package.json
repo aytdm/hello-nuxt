@@ -16,7 +16,7 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
-    "axios": "0.18.1",
+    "axios": "0.19.2",
     "dayjs": "1.8.19",
     "element-ui": "2.13.0",
     "nuxt": "2.11.0",
