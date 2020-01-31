@@ -7,5 +7,6 @@
       "automergeType": "branch",
       "automerge": true
     }
-  ]
+  ],
+  "labels": ["dependencies"]
 }
