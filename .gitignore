@@ -15,5 +15,4 @@ yarn.lock
 
 #mine
 gh-pages
-package-lock\.json
 coverage
