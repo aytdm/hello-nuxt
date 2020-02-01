@@ -41,7 +41,7 @@
     "eslint-plugin-vue": "6.1.2",
     "jest": "25.1.0",
     "node-sass": "4.13.1",
-    "require-extension-hooks-babel": "0.1.1",
+    "require-extension-hooks-babel": "1.0.0",
     "sass-loader": "8.0.2",
     "vue-jest": "3.0.5"
   }
