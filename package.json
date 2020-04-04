@@ -9,7 +9,9 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:css": "stylelint --fix \"src/**/*.{scss,vue}\"",
     "precommit": "npm run lint",
     "analyze": "nuxt build --analyze",
     "test": "jest --verbose",
@@ -36,6 +38,8 @@
     "node-sass": "4.13.1",
     "require-extension-hooks-babel": "1.0.0",
     "sass-loader": "8.0.2",
+    "stylelint": "13.3.0",
+    "stylelint-scss": "3.16.0",
     "vue-jest": "3.0.5"
   }
 }
