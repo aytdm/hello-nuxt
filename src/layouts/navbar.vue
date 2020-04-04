@@ -10,7 +10,7 @@
 import MyHeader from '~/components/Header.vue'
 import MyFooter from '~/components/Footer.vue'
 export default {
-  name: 'navbar',
+  name: 'Navbar',
   components: {
     MyHeader,
     MyFooter

@@ -1,16 +1,16 @@
 <template>
   <el-form
+    ref="searchForm"
     :inline="true"
     :model="searchForm"
-    ref="searchForm"
     :rules="rules"
     @submit.native.prevent
   >
     <el-form-item prop="keyword">
       <el-input
+        v-model="searchForm.keyword"
         placeholder="search by keyword"
         prefix-icon="el-icon-search"
-        v-model="searchForm.keyword"
         @keydown.enter.native="$event.stopPropagation()"
         @keyup.enter.native="search('searchForm')"
       />
