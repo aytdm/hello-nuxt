@@ -1,7 +1,7 @@
 # hello-nuxt
 
-![CircleCI](https://circleci.com/gh/aytdm/hello-nuxt/tree/master.svg?style=svg)
-![Netlify Status](https://api.netlify.com/api/v1/badges/27704670-7882-4d49-94c2-9f34f7e5fe02/deploy-status)
+![Main workflow](https://github.com/aytdm/hello-nuxt/workflows/Main%20workflow/badge.svg?branch=master)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/27704670-7882-4d49-94c2-9f34f7e5fe02/deploy-status)](https://app.netlify.com/sites/hello-nuxt-use-vuex-store/deploys)
 
 ## What is this?
 
