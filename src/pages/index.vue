@@ -9,7 +9,7 @@
       </h4>
       <div class="links">
         <nuxt-link to="/search" class="button-white">
-          <i class="el-icon-search"></i> Search
+          <i class="el-icon-search" /> Search
         </nuxt-link>
       </div>
     </div>

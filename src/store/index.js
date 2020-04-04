@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'https://qiita.com/api/v2/';
+const BASE_URL = 'https://qiita.com/api/v2/'
 
 export const state = () => ({
   lists: [],
@@ -30,8 +30,7 @@ export const actions = {
         query: payload.keyword
       },
       timeout: 15000
-    }).catch((error) => {
-      console.error(error)
+    }).catch(() => {
       commit('hideLoading')
       this.$router.push('/error')
     })

@@ -10,7 +10,7 @@
 </template>
 
 <script lang="babel">
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 import SearchResult from '~/components/SearchResult.vue'
 import SearchForm from '~/components/SearchForm.vue'
 
@@ -20,11 +20,11 @@ export default {
     SearchForm,
     SearchResult
   },
-  computed: mapState(['isLoading']),
   fetch ({ store }) {
     store.dispatch('getItems', {
       keyword: 'nuxt.js'
     })
-  }
+  },
+  computed: mapState(['isLoading'])
 }
 </script>
