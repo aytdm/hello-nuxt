@@ -34,7 +34,7 @@
     "browser-env": "3.3.0",
     "eslint": "6.8.0",
     "eslint-plugin-import": "2.20.2",
-    "jest": "25.5.3",
+    "jest": "25.5.4",
     "node-sass": "4.14.0",
     "require-extension-hooks-babel": "1.0.0",
     "sass-loader": "8.0.2",
