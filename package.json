@@ -27,7 +27,7 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "2.0.2",
     "@nuxtjs/style-resources": "1.0.0",
-    "@vue/test-utils": "1.0.0",
+    "@vue/test-utils": "1.0.2",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.1.0",
     "babel-jest": "25.5.1",
