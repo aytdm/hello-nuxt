@@ -25,7 +25,7 @@
     "vue-scrollto": "2.18.1"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "2.0.2",
+    "@nuxtjs/eslint-config": "3.0.0",
     "@nuxtjs/style-resources": "1.0.0",
     "@vue/test-utils": "1.0.3",
     "babel-core": "7.0.0-bridge.0",
