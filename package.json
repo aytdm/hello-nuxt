@@ -21,7 +21,7 @@
     "axios": "0.19.2",
     "dayjs": "1.8.28",
     "element-ui": "2.13.2",
-    "nuxt": "2.13.1",
+    "nuxt": "2.13.2",
     "vue-scrollto": "2.18.1"
   },
   "devDependencies": {
