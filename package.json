@@ -40,6 +40,6 @@
     "sass-loader": "8.0.2",
     "stylelint": "13.7.1",
     "stylelint-scss": "3.18.0",
-    "vue-jest": "3.0.6"
+    "vue-jest": "3.0.7"
   }
 }
