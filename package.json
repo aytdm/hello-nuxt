@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "axios": "0.20.0",
-    "dayjs": "1.9.0",
+    "dayjs": "1.9.1",
     "element-ui": "2.13.2",
     "nuxt": "2.14.6",
     "vue-scrollto": "2.18.2"
