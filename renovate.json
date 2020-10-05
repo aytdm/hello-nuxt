@@ -8,5 +8,6 @@
       "automerge": true
     }
   ],
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "enabled": false
 }
